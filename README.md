@@ -10,88 +10,57 @@ If you want to know more about _why_ we are doing this, you can read the [Learni
 
 You'll need SQLite3 to complete this project. If you haven't installed it already, read our [guide for installing SQLite3][sqlite3-install].
 
-Once you have SQLite3 working, you can set up your development environment with the following steps:
+The source code for this project is available in the [linkedout-example repository][example-project].
 
-1. Fork and clone this repository
+To get started, follow these steps:
+
+1. Fork and clone the [linkedout-example repository][example-project]
 - Install the dependent gems: `bundle install --without production`
 - Create a `.env` file from the default `cp .env.example .env`
 - Seed the database with `bundle exec rake db:seed`
 - Run the server and restart when files change `bundle exec rerun -c rackup`
 
-### Files In This Repository
-
 ## Releases
 
-We've inherited a project that has already been worked on. It is up to release 0.8.0, which contains the following features:
+We've [inherited this project][example-project] and need to add new features. It currently implements the following features:
 
-- A user can view a résumé show page
-- A user can edit the contents of a résumé via separate edit pages
-- A user can add **skills** and **jobs** via forms on the résumé show page
+- User can view a résumé show page
+- User can edit user their profile information
+- User can add, edit, and delete jobs
+- User can add and delete skill
 
-Now it is up to us to add extra features to this project. Our goal for release 1.0.0 is to provide users with a one-page application where they can view their own résumé and add jobs and skills as needed.
+_You can see a history of all releases for this project on the [project's README page][example-project] under the [resources section](https://github.com/codeunion/linkedout-example#releases)._
 
-The _releases after 1.0.0 are for more advanced work_. If you are up for the challenge, go for it!
+Now it is up to us to add extra features to this project. **Write code to satisfy the requirements in release 1.5.0 and 1.8.0**.
 
-### Release 0.9.0: Create new skills asynchronously
+The _releases after v1.8.0 are for more advanced work_. If you are up for the challenge, go for it!
 
-Requirements:
+### v[1.5.0] Display education information
 
-- [ ] A user may add skills directly on their résumé show page
-- [ ] Adding skills does not require a page refresh (i.e. must be AJAX)
-- [ ] Added skills immediately show on the page in the appropriate spot
+- [ ] Résumé show page displays a users education history
+- [ ] User can have many schools
+- [ ] Schools belong to a user
+- [ ] Schools have a name, graduation year, and subjects studied
 
-Resources:
+### v[1.8.0] Full asynchronous CRUD for schools
 
-- Anatomy of a jQuery POST request [TODO: Needs writeup in wiki]
-- Sending POST requests with AJAX: [API documentation for the `jQuery.post()` function][jquery-api-post] (make sure to read some of the examples)
-- Adding content to the DOM with jQuery: [Documentation for jQuery's `.append()` function][jquery-api-append]
+- [ ] User can add schools on the résumé show page
+- [ ] User can edit schools on the résumé show page
+- [ ] User can delete schools on the résumé show page
+- [ ] Creating, editing, and deleting schools occurs asynchronously
+- [ ] Added schools show on the page in the appropriate spot without refresh
+- [ ] Edited schools are updated on the page without refresh
+- [ ] Deleted schools are removed from the page without refresh
 
-- Using a partial as response data
+### v[1.9.0] Improve the UI
 
-### Release 1.0.0: Create jobs asynchronously
+- [ ] Page has pretty colors and fonts
+- [ ] Design follows [fundamentals of User Interface design](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
 
-Requirements:
+### v[2.0.0] Filter by skill
 
-- [ ] A user may add jobs directly to their résumé show page, including the job _title_, _description_, and _company name_
-- [ ] Adding jobs does not require a page refresh (i.e. must be AJAX)
-- [ ] Added jobs immediately show on the page in the appropriate spot
-
-Resources:
-
-- Sending form data in an AJAX request [TODO: Needs writeup in wiki]
-- Reading and serializing data from a form in jQuery: [jQuery's `.serialize()` function][jquery-api-serialize]
-
-### Release 1.1.0: Improve the CSS
-
-_Everything from this release forward is optional: continue at your own risk/pleasure._
-
-This website is not so good-looking. Make it more good-looking with CSS. You'll need to know a little bit about the [fundamentals of User Interface design](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals).
-
-### Release 1.2.0: Edit and delete skills and jobs
-
-Requirements:
-
-- [ ] A user can edit skills from the résumé show page
-- [ ] A user can edit jobs from the résumé show page
-- [ ] A user can delete skills from the résumé show page
-- [ ] A user can delete jobs from the résumé show page
-- [ ] All editing and deleting of skills and jobs does not require a page refresh
-
-### Release 1.3.0: Support multiple users
-
-Requirements:
-
-- [ ] Multiple users can create their own résumés
-- [ ] Resumes can be viewed at [friendly URLs](http://en.wikipedia.org/wiki/Semantic_URL), e.g. `/resumes/jane-smith`
-
-### Release 1.4.0: Filter by skill
-
-Requirements:
-
-- [ ] A user can search for other users by a specific skill
+- [ ] User can search for other users by a specific skill
 - [ ] Clicking on a skill links to a page listing all users with that skill at a URL like `/skills/web-development`
-
-## Finishing Up
 
 ## Learning Goals
 
@@ -103,6 +72,7 @@ By the end of the project, we will:
 - Be able to use request data to create new records in a database
 - Understand how JavaScript can be used to manipulate the DOM
 
+[example-project]:https://github.com/codeunion/linkedout-example
 [sqlite3-install]:https://github.com/codeunion/fundamentals-of-web-development/wiki/Resources-and-Tools#sqlite
 [jquery-api-post]:http://api.jquery.com/jquery.post/
 [jquery-api-append]:http://api.jquery.com/append/
