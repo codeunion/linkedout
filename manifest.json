@@ -1,0 +1,14 @@
+{
+  "category": "project",
+  "tags": [
+    "ruby",
+    "sinatra",
+    "javascript",
+    "jquery",
+    "ajax",
+    "request-routing",
+    "json",
+    "dom-manipulation"
+  ],
+  "notes": "Just a project guide. Source code in separate repo."
+}
